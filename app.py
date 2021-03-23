@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 def riet():
     
-    from python_firebase import firebase
+    from firebase import firebase
     firebase1 = firebase.FirebaseApplication('https://led-blink-wifi-default-rtdb.firebaseio.com/', None)
     result = firebase1.get('/led1', None)
     list_result = list(result.values())[-11:-1]
